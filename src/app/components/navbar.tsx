@@ -28,7 +28,7 @@ const Navbar = () => {
             {/* navpages */}
              <div className='flex gap-3 md:gap-10 lg:gap-16 mt-2 md:mt-2 lg:mt-1 '>
                 {navpages.map((items, index)=>(
-                    <div className='text-[10px] font-semibold md:text-[17px] '>
+                    <div key={index} className='text-[10px] font-semibold md:text-[17px] '>
                        <Link href={"#"}> <p>{items.name}</p></Link>
                     </div>
                 ))}

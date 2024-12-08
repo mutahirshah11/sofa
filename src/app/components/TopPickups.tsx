@@ -27,7 +27,7 @@ const TopPickups = () => {
              <div className='flex justify-center items-center lg:px-2 py-5' >
                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
                    {Topitems.map((items , index)=>(
-                    <div className=''>
+                    <div  key={index} className=''>
                         <Image src={items.Image} alt={items.name}/>
                         <p className='font-sans font-semibold w-[70%] mb-2 '>{items.name}</p>
                         <p className='font-bold'>{items.price}</p>
