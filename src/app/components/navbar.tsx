@@ -37,7 +37,7 @@ const Navbar = () => {
              {/* navIcons */}
              <div className='flex gap-3 md:gap-5 mt-2 lg:mt-[-1px] lg:mr-10 xl:mr-24 lg:gap-10'>
                 {navicons.map((items, index)=>(
-                    <Link href={"#"} className=' size-4 md:size-5 lg:size-[25px] '>
+                    <Link key={index} href={"#"} className=' size-4 md:size-5 lg:size-[25px] '>
                         <Image src={items.icon} alt="icons"/> 
                     </Link>
                 ))}
