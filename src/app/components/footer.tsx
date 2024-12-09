@@ -1,94 +1,85 @@
 import React from "react";
-
+import Link from "next/link";
 
 export default function Footer() {
+  const links = [
+    { name: "Home", href: "#" },
+    { name: "Shop", href: "#" },
+    { name: "About", href: "#" },
+    { name: "Contact", href: "#" },
+  ];
+
+  const helpLinks = [
+    { name: "Payment Options", href: "#" },
+    { name: "Returns", href: "#" },
+    { name: "Privacy Policies", href: "#" },
+  ];
+
   return (
-    <footer className="bg-white text-gray-700 py-8 border-t">
-      <div className="container mx-auto px-4">
-        {/* Main Content */}
-        <div className="flex flex-wrap justify-between">
+    <footer className="bg-white text-gray-700 pt-20 pb-5 border-t">
+      <div className=" flex justify-center items-center ">
+        <div className="grid grid-cols-1  md:grid-cols-4 gap-0 px-4 mb-10">
           {/* Address Section */}
-          <div className="w-full lg:w-1/4 mb-8 lg:mb-0">
-            <p className="text-sm">
-              400 University Drive Suite 200<br />
+          <div className="mb-8 lg:mb-0  lg:ml-5 lg:mt-20">
+            <p className="text-sm lg:text-[16px] text-[#9F9F9F]/90 w-[70%]">
+              400 University Drive Suite 200
+              <br />
               Coral Gables, FL 33134 USA
             </p>
           </div>
 
           {/* Links Section */}
-          <div className="w-full lg:w-1/4 mb-8 lg:mb-0">
-            <h3 className="font-bold mb-4">Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Shop
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Contact
-                </a>
-              </li>
+          <div className="mb-8 lg:mb-0">
+            <h3 className="font-bold mb-4 lg:mb-10 text-[#9F9F9F]/90">Links</h3>
+            <ul className="space-y-2 lg:space-y-11 text-[black] font-semibold">
+              {links.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="hover:underline">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Help Section */}
-          <div className="w-full lg:w-1/4 mb-8 lg:mb-0">
-            <h3 className="font-bold mb-4">Help</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  Payment Options
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Returns
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Privacy Policies
-                </a>
-              </li>
+          <div className="mb-8 lg:mb-0">
+            <h3 className="font-bold mb-4  lg:mb-10 text-[#9F9F9F]/90">Help</h3>
+            <ul className="space-y-2 lg:space-y-11 text-[black] font-semibold">
+              {helpLinks.map((helpLink, index) => (
+                <li key={index}>
+                  <Link href={helpLink.href} className="hover:underline">
+                    {helpLink.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Newsletter Section */}
-          <div className="w-full lg:w-1/4">
-            <h3 className="font-bold mb-4">Newsletter</h3>
-            <form className="flex items-center space-x-2">
+          <div>
+            <h3 className="font-bold mb-4 text-[#9F9F9F]/90">Newsletter</h3>
+            <form className="  ">
               <input
                 type="email"
-                placeholder="Enter Your Email Address"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none"
+                placeholder="Enter Email Address"
+                className=" text-[15px] py-3 px-1 w-[170px] border-b-[1px] border-black"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800"
+                className=" ml-3 py-3 px-4 border-b-[1px] border-black text-black hover:bg-gray-300"
               >
                 SUBSCRIBE
               </button>
             </form>
           </div>
         </div>
-
-        {/* Footer Bottom */}
-        <div className="mt-8 text-center border-t pt-4">
-          <p className="text-sm text-gray-500">
-            2022 Meubel House. All rights reserved
-          </p>
-        </div>
+      </div>
+      {/* Footer Bottom */}
+      <div className="my-1 flex justify-center items-center text-center border-t border-gray-300 pt-6 lg:bottom-0 lg:left-0 lg:justify-start lg:px-6 w-[85%] mx-auto">
+        <p className="text-md lg:text-[16px] text-black mt-3 lg:ml-8">
+          2022 Meubel House. All rights reserved
+        </p>
       </div>
     </footer>
   );

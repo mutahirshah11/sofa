@@ -21,10 +21,10 @@ const navpages = [
 ]
 
 
-const Navbar = () => {
+const Navbar1 = () => {
   return (
     <div>
-        <div className='flex justify-center lg:justify-end items-center gap-6 md:gap-24 lg:gap-32 xl:gap-40   w-[full] h-[80px] lg:h-[100px] bg-[#FBEBB5] relative'> 
+        <div className='flex justify-center lg:justify-end items-center gap-6 md:gap-24 lg:gap-32 xl:gap-40   w-[full] h-[80px] lg:h-[100px] bg-[#FFFFFF] relative'> 
             {/* navpages */}
              <div className='flex gap-3 md:gap-10 lg:gap-16 mt-2 md:mt-2 lg:mt-1 '>
                 {navpages.map((items , index)=>(
@@ -37,7 +37,7 @@ const Navbar = () => {
              {/* navIcons */}
              <div className='flex gap-3 md:gap-5 mt-2 lg:mt-[-1px] lg:mr-10 xl:mr-24 lg:gap-10'>
                 {navicons.map((items, index)=>(
-                    <Link key={index} href={"#"} className=' size-4 md:size-5 lg:size-[25px] '>
+                    <Link key={index} href={items.href} className=' size-4 md:size-5 lg:size-[25px] '>
                         <Image src={items.icon} alt="icons"/> 
                     </Link>
                 ))}
@@ -48,4 +48,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar1
