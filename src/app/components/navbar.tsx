@@ -17,7 +17,7 @@ const navpages = [
     {name : "Home" , href:"../"},
     {name : "Shop" , href:"../Shop"},
     {name : "About", href:""},
-    {name : "Contact", href:""},
+    {name : "Contact", href:"../Contact"},
 ]
 
 
