@@ -5,6 +5,7 @@ import pic2 from "../../../public/images/blog1.png";
 import pic3 from "../../../public/images/blog2.png";
 import clock from "../../../public/images/clock.png";
 import calender from "../../../public/images/calender.png";
+import Link from "next/link";
 
 const Carditems = [
   {
@@ -55,7 +56,8 @@ const Ourblogs = () => {
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:px-20">
             {Carditems.map((items, index) => (
-              <div
+              <Link
+              href={"../Blog"}
                 key={index}
                 className="flex flex-col justify-center items-center gap-6 "
               >
@@ -94,7 +96,7 @@ const Ourblogs = () => {
                     <p className="mt-[2px]">{items.date}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

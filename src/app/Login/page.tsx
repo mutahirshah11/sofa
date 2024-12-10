@@ -10,27 +10,27 @@ const Login = () => {
       <Banner title="My Account" subtitle="Home" breadcrumb="My account" />
 
       <div className="">
-        <div  className="lg:flex lg:justify-center lg:items-center lg:gap-44">
+        <div  className="lg:flex lg:justify-center lg:items-center lg:gap-44 lg:ml-10">
           {/* Login  */}
 
-          <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-5 my-10 ">
-            <h1 className="font-[600] text-[30px]">Log In</h1>
+          <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-5 lg:gap-8  my-20 ">
+            <h1 className="font-[600] text-[30px] lg:text-[33px]">Log In</h1>
 
             <div className="flex flex-col ">
-              <label className="text-[10px] font-semibold">
+              <label className="text-[10px] lg:text-[15px] font-semibold">
                 Username or email address{" "}
               </label>
               <input
                 type="email"
-                className="px-5 py-3 border-[2px] borde-gray-500 rounded-md mt-4"
+                className="px-5 py-3 lg:w-[350px] lg:h-[60px] border-[2px] borde-gray-500 rounded-md mt-4"
               />
             </div>
 
             <div className="flex flex-col ">
-              <label className="text-[10px] font-semibold">Password</label>
+              <label className="text-[10px] lg:text-[15px] font-semibold">Password</label>
               <input
                 type="password"
-                className="px-5 py-3 border-[2px] borde-gray-500 rounded-md mt-4"
+                className="px-5 py-3  lg:w-[350px] lg:h-[60px] border-[2px] borde-gray-500 rounded-md mt-4"
               />
             </div>
 
@@ -43,14 +43,14 @@ const Login = () => {
               />
               <label
                 htmlFor="rememberMe"
-                className="font-semibold text-[15px] ml-2 mt-[1px]"
+                className="font-semibold text-[15px] ml-2 lg:ml-5 mt-[1px]"
               >
                 Remember Me
               </label>
             </div>
 
             <div className="flex ">
-              <button className="px-10 py-2 text-[15px] font-[500] border-[1px] border-gray-900 rounded-xl ">
+              <button className="px-10 py-2 lg:w-[180px] lg:h-[55px] text-[15px] font-[500] border-[1px] border-gray-900 rounded-xl ">
                 Log In{" "}
               </button>
               <div className="mt-3 ml-3">
@@ -62,22 +62,22 @@ const Login = () => {
           </div>
 
           {/* register  */}
-          <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-7 my-20 md:mt-10 ">
+          <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-7 my-10 lg:gap-8 md:mt-10 ">
             <h1 className="font-[600] text-[30px]">Register </h1>
 
             <div className="flex flex-col ">
-              <label className="text-[10px] font-semibold">
+              <label className="text-[10px] lg:text-[15px] font-semibold">
                 Username or email address{" "}
               </label>
               <input
                 type="email"
-                className="px-5 py-3 border-[2px] borde-gray-500 rounded-md mt-4"
+                className="px-5 py-3  lg:w-[350px] lg:h-[60px] border-[2px] borde-gray-500 rounded-md mt-4"
               />
             </div>
 
             {/* text */}
 
-            <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-5 text-[10px] font-[400] text-gray-900 w-[300px] ml-12">
+            <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-5 text-[10px] lg:text-[16px] font-[400] text-gray-900 w-[300px] lg:w-[400px] ml-12 lg:ml-0">
               <div>
                 <p>
                   A link to set a new password will be sent to your email
@@ -96,8 +96,8 @@ const Login = () => {
             </div>
 
             <div className="flex ">
-              <button className="px-10 py-2 text-[15px] font-[500] border-[1px] border-gray-500 rounded-xl ">
-                Register{" "}
+              <button className="px-10 py-2 lg:w-[180px] lg:h-[55px] text-[15px] font-[500] border-[1px] border-gray-500 rounded-xl ">
+                Register
               </button>
             </div>
           </div>
