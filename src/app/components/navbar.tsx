@@ -101,15 +101,15 @@ const Navbar1 = () => {
                   <div className="  flex justify-center items-center gap-3">
                     <Link
                       href={"../Cart"}
-                      className="w-[135px] h-[32px] border text-center text-[15px] border-gray-400 text-gray-400 rounded-xl  hover:bg-gray-100"
+                      className="w-[145px] h-[36px]  border text-center text-[15px] border-gray-400 text-gray-400 rounded-xl  hover:bg-gray-100"
                     >
-                      <p className="mt-1 hover:bg-gray-100">View Cart</p>
+                      <p className="mt-1.5 hover:bg-gray-100">View Cart</p>
                     </Link>
                     <Link
                       href={"../Checkout"}
-                      className="w-[135px] h-[32px] border text-center text-[15px] border-gray-400 text-gray-400 rounded-xl  hover:bg-gray-100"
+                      className="w-[145px] h-[36px] border text-center text-[15px] border-gray-400 text-gray-400 rounded-xl  hover:bg-gray-100"
                     >
-                      <p className="mt-1 hover:bg-gray-100">Checkout </p>
+                      <p className="mt-1.5 hover:bg-gray-100">Checkout </p>
                     </Link>
                   </div>
                 </div>
