@@ -22,7 +22,7 @@ const Login = () => {
               </label>
               <input
                 type="email"
-                className="px-5 py-3 lg:w-[350px] lg:h-[60px] border-[2px] borde-gray-500 rounded-md mt-4"
+                className="px-5 py-3 lg:w-[350px] lg:h-[60px] border-[2px] rounded-md mt-4"
               />
             </div>
 
@@ -30,7 +30,7 @@ const Login = () => {
               <label className="text-[10px] lg:text-[15px] font-semibold">Password</label>
               <input
                 type="password"
-                className="px-5 py-3  lg:w-[350px] lg:h-[60px] border-[2px] borde-gray-500 rounded-md mt-4"
+                className="px-5 py-3  lg:w-[350px] lg:h-[60px] border-[2px] rounded-md mt-4"
               />
             </div>
 
@@ -51,7 +51,7 @@ const Login = () => {
 
             <div className="flex ">
               <button className="px-10 py-2 lg:w-[180px] lg:h-[55px] text-[15px] font-[500] border-[1px] border-gray-900 rounded-xl ">
-                Log In{" "}
+                Log In
               </button>
               <div className="mt-3 ml-3">
                 <p className=" text-[15px] hover:underline underline-black ">
@@ -96,7 +96,7 @@ const Login = () => {
             </div>
 
             <div className="flex ">
-              <button className="px-10 py-2 lg:w-[180px] lg:h-[55px] text-[15px] font-[500] border-[1px] border-gray-500 rounded-xl ">
+              <button className="px-10 py-2 lg:w-[180px] lg:h-[55px] text-[15px] font-[500] border-[1px] border-gray-900 rounded-xl ">
                 Register
               </button>
             </div>
