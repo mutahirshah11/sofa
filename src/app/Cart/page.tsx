@@ -4,6 +4,7 @@ import Navbar1 from "../components/navbar1";
 import FreeDelivery from "../components/freeDelivery";
 import Image from "next/image";
 import sofaimg from "../../../public/images/cartsofa1.png";
+import Dustbin from "../../../public/images/dustbin.png";
 
 const products = [
   {
@@ -21,7 +22,7 @@ const CartPage = () => {
       <Navbar1 />
       <Banner title="Cart" subtitle="Home" breadcrumb="Cart" />
 
-      <div className=" py-8 flex flex-col justify-center items-center ">
+      <div className=" py-8 flex flex-col justify-center items-center xl:ml-10 ">
         {/* Wrapper */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
           {/* Product Section */}
@@ -30,7 +31,7 @@ const CartPage = () => {
             <div>
               {/* Yellow Headings */}
               <div className="bg-[#FFF9E5]  p-4">
-                <div className="grid grid-cols-4 text-sm font-bold">
+                <div className="grid grid-cols-5 text-[10px] md:text-[14px] font-bold ml-5 ">
                   <span>Product</span>
                   <span>Price</span>
                   <span>Quantity</span>
@@ -39,11 +40,11 @@ const CartPage = () => {
               </div>
 
               {/* White Product Rows */}
-              <div className="bg-white  p-4 mt-2 ">
+              <div className="bg-white   p-4 mt-2 ">
                 {products.map((product) => (
                   <div
                     key={product.id}
-                    className="grid grid-cols-4 items-center text-[8px] md:text-[14px]  py-3 "
+                    className="grid grid-cols-5 items-center text-[8px] md:text-[14px] py-3"
                   >
                     {/* Product Info */}
                     <div className="flex flex-col lg:flex-row items-center gap-4">
@@ -52,8 +53,7 @@ const CartPage = () => {
                         alt="sofaimg"
                         className=" w-12 h-12 lg:w-16 lg:h-16 "
                       />
-
-                      <span className="text-gray-400 font-[500]">
+                      <span className="text-gray-400 font-[500] md:text-[13px] ">
                         {product.name}
                       </span>
                     </div>
@@ -74,9 +74,14 @@ const CartPage = () => {
                     <div className="text-black font-[600]">
                       {product.subtotal}
                     </div>
-
-                    {/* dustbin  */}
-                    <div></div>
+                    {/* Dustbin Icon */}
+                    <div className="flex justify-center">
+                      <Image
+                        src={Dustbin}
+                        alt="remove"
+                        className="cursor-pointer size-3 md:size-5"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
