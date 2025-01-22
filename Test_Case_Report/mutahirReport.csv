@@ -1,0 +1,13 @@
+Test Case ID,Description,Steps,Expected Result,Actual Result,Status,Remarks
+Test 1,Validate product listing,Open product page on homepage & Dynamically > Verify products,Products displayed,Products displayed,Passed,No issues
+Test 2,Test API error handling,Disconnect API > Refresh page,Show fallback message,"Data is stored in the CMS, ensuring it persists even after a page refresh. If, in rare cases, the data is not displayed, the fallback message is triggered and shown.",Passed,Handled gracefully
+Test 3,Addtocart  functionality,Add item to cart > Verify cart >Refresh Page > Products still there,AddtoCart updates correctly,Cart updates correctly,Passed,Works as expected
+Test 4,Test responsiveness,Resize browser window > Check layout,Layout adjusts properly,Layout adjusts properly even in  all screen sizes,Passed,Responsive verified
+Test 5,Dynamic Products,Click on Any Product and its data will be shown dynamically,Dynamic Product is shwon with unique id and other info,Dynamic Product is shwon with unique id,Passed,Works as expected
+Test 6,Handle Stock of the products which i fetch from sanity,whenever clicked on add to cart button stock becomes less and when removed from cart its again added,Stock get subtracted when its added to cart ,Stock Handle,passed,Works as expected
+Test 7,Notification Toast,Whenever add to cart button is clicked or wishlist icon toast message is shown to confirm the user that your product is added successfully,toast notification is shown ,toast notification is shown,passed,Works as expected
+Test 8,Checkout page Working,checkout succesfully shows all the products billing which where added to cart,all the values are shown,all the values are shown,Passed,Works as expected
+Test 9,Customer Data storing to Sanity when entered from Checkout page,customer data is succesfully stored in sanity when customer enters his details in the billing details on checkout page,data is shown in sanity,data is shown in sanity,Passed,Works as expected
+Test 10,Deployment ,Deployed on vercel & add environment Variables,successfully deployed ,successfully deployed ,Passed,Works as expected
+Test 11,Performance Testing,Performance Testing by using light house Chrome Extention,Performance should be great,Performance 99%,Passed,Works as expected
+Test 12,Project Structure,Project structure and organization,"well-organized with folders like src/, public/, and documents/","well-organized with folders like src/, public/, and documents/ as well as Reusable Components",Passed,works as expected
