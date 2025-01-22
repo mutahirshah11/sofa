@@ -37,7 +37,7 @@ const CartSlider: React.FC = () => {
     <div>
       <Sheet>
         <SheetTrigger>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-1 lg:gap-1.5 items-center">
             <Image
               src="/images/cart.png"
               alt="cart icon"
@@ -45,7 +45,7 @@ const CartSlider: React.FC = () => {
               height={30}
               className="cursor-pointer w-[20px] md:w-[25px] lg:w-[30px]"
             />
-            <p className="bg-red-400 rounded-full w-5 h-5 flex items-center justify-center text-[12px] text-white">
+            <p className="bg-red-400 rounded-full w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center text-[10px] lg:text-[12px] text-white">
               {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
             </p>
           </div>
