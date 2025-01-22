@@ -27,35 +27,13 @@ type Product = {
 };
 
 type Props = {
-  params: { id: string };
+  product: Product;
 };
 
-const MainPage = async ({ params }: Props) => {
-  const query = `
-    *[_type == "product" && id == $id] {
-      _id,
-      name,
-      price,
-      description,
-      "image": image.asset->url,
-      rating,
-      reviews,
-      id,
-      stockInHand,
-      size, 
-      color
-      
-    }
-  `;
-
-  const  { id } = await params;
-  const products: Product[] = await client.fetch(query, { id });
-
-  if (!products.length) {
+const MainPage = ({ product }: Props) => {
+  if (!product) {
     return <div>Product not found</div>;
   }
-
-  const product = products[0];
 
   return (
     <div>
@@ -130,20 +108,18 @@ const MainPage = async ({ params }: Props) => {
               <p className="text-sm font-semibold text-gray-800">Size</p>
               <div className="flex gap-2 mt-2">
                 <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size}</button>
-                
               </div>
             </div>
 
             {/* Color Options */}
             <div className="mt-6">
               <p className="text-sm font-semibold text-gray-800">Color</p>
-
-              <Color/>
+              <Color />
             </div>
 
             {/* Quantity and Add to Cart */}
             <div className="flex items-center mt-6">
-               <AddToCartButton product={product}/>
+              <AddToCartButton product={product} />
               <Button name="Check Out" />
             </div>
 
@@ -181,13 +157,44 @@ const MainPage = async ({ params }: Props) => {
 export default MainPage;
 
 // Generate static paths for dynamic routes
-export async function generateStaticParams() {
+export const getStaticPaths = async () => {
   const ids = await client.fetch(
     `*[_type == "product"] { "id": id }`
   );
-
-  return ids.map((id: { id: string }) => ({
-    id: id.id,
+  const paths = ids.map((id: { id: string }) => ({
+    params: { id: id.id },
   }));
-}
 
+  return {
+    paths,
+    fallback: false, // Adjust this based on your needs
+  };
+};
+
+// Fetch the product data
+export const getStaticProps = async ({ params }: { params: { id: string } }) => {
+  const { id } = params;
+
+  const query = `
+    *[_type == "product" && id == $id] {
+      _id,
+      name,
+      price,
+      description,
+      "image": image.asset->url,
+      rating,
+      reviews,
+      id,
+      stockInHand,
+      size,
+      color
+    }
+  `;
+  const products: Product[] = await client.fetch(query, { id });
+
+  return {
+    props: {
+      product: products.length ? products[0] : null,
+    },
+  };
+};
