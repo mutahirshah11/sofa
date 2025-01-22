@@ -75,7 +75,7 @@ const MainPage = async ({ params }: Props) => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 ml-[10px]">
         <div className="flex flex-wrap md:flex-nowrap gap-8">
           {/* Left: Image */}
           <div className="w-full md:w-1/2 flex flex-col md:flex-row items-center gap-4">

@@ -101,8 +101,8 @@ export default function CheckoutForm() {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row justify-center items-start lg:gap-28 xl:gap-44">
-        <div className="flex flex-col justify-center items-start my-20">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start lg:gap-28 xl:gap-44">
+        <div className="flex flex-col justify-center items-start my-20 ">
           <h1 className="text-[30px] font-bold mb-10">Billing details</h1>
 
           <form id="checkout-form" onSubmit={handleSubmit} className="w-full">
