@@ -23,7 +23,6 @@ type Product = {
   id: string;
   stockInHand: number;
   size: string[];
-  color: string[];
 };
 
 type Props = {
