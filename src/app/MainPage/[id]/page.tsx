@@ -128,7 +128,7 @@ const MainPage = async ({ params }: Props) => {
             <div className="mt-6">
               <p className="text-sm font-semibold text-gray-800">Size</p>
               <div className="flex gap-2 mt-2">
-                <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size[0]}</button>
+              <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size[0]}</button>
                 <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size[1]}</button>
                 <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size[2]}</button>
               </div>
