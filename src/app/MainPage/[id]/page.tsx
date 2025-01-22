@@ -31,8 +31,6 @@ type Props = {
 };
 
 const MainPage = async ({ params }: Props) => {
-  const { id } = params; // Correctly destructure `id` from params
-
   const query = `
     *[_type == "product" && id == $id] {
       _id,
@@ -46,10 +44,11 @@ const MainPage = async ({ params }: Props) => {
       stockInHand,
       size, 
       color
+      
     }
   `;
 
-  // Fetch the product using the id directly
+  const  { id } = await params;
   const products: Product[] = await client.fetch(query, { id });
 
   if (!products.length) {
@@ -131,18 +130,20 @@ const MainPage = async ({ params }: Props) => {
               <p className="text-sm font-semibold text-gray-800">Size</p>
               <div className="flex gap-2 mt-2">
                 <button className="px-3 py-1 border rounded-lg text-gray-600 hover:bg-[#FBEBB5]">{product.size}</button>
+                
               </div>
             </div>
 
             {/* Color Options */}
             <div className="mt-6">
               <p className="text-sm font-semibold text-gray-800">Color</p>
-              <Color />
+
+              <Color/>
             </div>
 
             {/* Quantity and Add to Cart */}
             <div className="flex items-center mt-6">
-              <AddToCartButton product={product} />
+               <AddToCartButton product={product}/>
               <Button name="Check Out" />
             </div>
 
@@ -189,3 +190,4 @@ export async function generateStaticParams() {
     id: id.id,
   }));
 }
+
