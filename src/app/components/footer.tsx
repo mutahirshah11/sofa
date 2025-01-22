@@ -1,7 +1,16 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Import usePathname
 
 export default function Footer() {
+  const pathname = usePathname(); // Get current route
+
+  // Don't show Footer on '/studio' or '/sanity' routes
+  if (pathname.includes("/studio") || pathname.includes("/sanity")) {
+    return null; // If the path contains '/studio' or '/sanity', return null (footer won't be shown)
+  }
+
   const links = [
     { name: "Home", href: "#" },
     { name: "Shop", href: "#" },

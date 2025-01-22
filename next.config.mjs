@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+      domains: [ "cdn.sanity.io" ], // Add imgur.com to the list of allowed domains
 
-export default nextConfig;
+    },
+    
+  };
+  
+  export default nextConfig;
+  

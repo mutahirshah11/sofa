@@ -2,8 +2,8 @@ import React from 'react'
 import Navbar1 from '../components/navbar1'
 import Banner from '../components/banner'
 import Filter from '../components/Filter'
-import Shopitems from '../components/shopItems'
- 
+import ShopitemsCard from '../components/shopitemsCard'
+import OneTwoThree from '../components/oneTwoThree'
 
 const Shop = () => {
   return (
@@ -11,7 +11,8 @@ const Shop = () => {
         <Navbar1/>
         <Banner title='Shop'  subtitle="Home"  breadcrumb='Shop'/>
         <Filter/>
-        <Shopitems/>
+        <ShopitemsCard/>
+        <OneTwoThree/>
         
 
     </div>

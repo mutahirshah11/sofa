@@ -12,7 +12,7 @@ interface Product {
   image: string;
 }
 
-export default function ShopitemsCard() {
+export default function ProductDetails() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function ShopitemsCard() {
 
           {/* Text */}
           <div className='flex flex-col justify-center items-center text-center pt-20  px-[10px]'>
-            <h1 className='font-bold text-[25px] md:text-[30px] xl:text-[33px] mb-3'>Top Picks For You</h1>
+            <h1 className='font-bold text-[25px] md:text-[30px] xl:text-[33px] mb-3'>Related Products You May Like</h1>
             <p className='text-[15px] xl:text-[16px] text-gray-400 mb-5'>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
         </div>
 

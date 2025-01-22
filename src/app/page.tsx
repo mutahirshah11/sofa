@@ -17,7 +17,6 @@ const Home = () => {
       <AsgaardSofa/>
       <Ourblogs/>
       <Insta/>
-      
     </div>
   )
 }
