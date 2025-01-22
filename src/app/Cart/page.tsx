@@ -7,6 +7,7 @@ import FreeDelivery from "../components/freeDelivery";
 import Image from "next/image";
 import Dustbin from "../../../public/images/dustbin.png";
 import { useCart } from "./../components/Provider";
+import Link from "next/link";
 
 const CartPage = () => {
   const { cart: cartItems, removeFromCart } = useCart();
@@ -100,9 +101,11 @@ const CartPage = () => {
               <span className="text-lg font-bold">Total</span>
               <span className="text-md font-bold text-[#B88E2F]">Rs.{subtotal.toFixed(2)}</span>
             </div>
-            <button className="w-[150px] h-[42px] lg:w-[200px] lg:h-[50px] bg-transparent border-gray-900 border-[1px] text-gray-900 font-[500] mb-5 rounded-xl hover:bg-black hover:text-white transition">
+           <Link href="../Checkout">
+           <button className="w-[150px] h-[42px] lg:w-[200px] lg:h-[50px] bg-transparent border-gray-900 border-[1px] text-gray-900 font-[500] mb-5 rounded-xl hover:bg-black hover:text-white transition">
               Check Out
             </button>
+          </Link>
           </div>
         </div>
       </div>
