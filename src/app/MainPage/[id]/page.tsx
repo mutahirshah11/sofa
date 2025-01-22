@@ -23,16 +23,40 @@ type Product = {
   id: string;
   stockInHand: number;
   size: string[];
+  color: string[];
 };
 
 type Props = {
-  product: Product;
+  params: { id: string };
 };
 
-const MainPage = ({ product }: Props) => {
-  if (!product) {
+const MainPage = async ({ params }: Props) => {
+  const { id } = params; // Correctly destructure `id` from params
+
+  const query = `
+    *[_type == "product" && id == $id] {
+      _id,
+      name,
+      price,
+      description,
+      "image": image.asset->url,
+      rating,
+      reviews,
+      id,
+      stockInHand,
+      size, 
+      color
+    }
+  `;
+
+  // Fetch the product using the id directly
+  const products: Product[] = await client.fetch(query, { id });
+
+  if (!products.length) {
     return <div>Product not found</div>;
   }
+
+  const product = products[0];
 
   return (
     <div>
@@ -156,44 +180,12 @@ const MainPage = ({ product }: Props) => {
 export default MainPage;
 
 // Generate static paths for dynamic routes
-export const getStaticPaths = async () => {
+export async function generateStaticParams() {
   const ids = await client.fetch(
     `*[_type == "product"] { "id": id }`
   );
-  const paths = ids.map((id: { id: string }) => ({
-    params: { id: id.id },
+
+  return ids.map((id: { id: string }) => ({
+    id: id.id,
   }));
-
-  return {
-    paths,
-    fallback: false, // Adjust this based on your needs
-  };
-};
-
-// Fetch the product data
-export const getStaticProps = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
-
-  const query = `
-    *[_type == "product" && id == $id] {
-      _id,
-      name,
-      price,
-      description,
-      "image": image.asset->url,
-      rating,
-      reviews,
-      id,
-      stockInHand,
-      size,
-      color
-    }
-  `;
-  const products: Product[] = await client.fetch(query, { id });
-
-  return {
-    props: {
-      product: products.length ? products[0] : null,
-    },
-  };
-};
+}
