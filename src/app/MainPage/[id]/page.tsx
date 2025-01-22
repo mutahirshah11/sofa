@@ -23,11 +23,10 @@ type Product = {
   id: string;
   stockInHand: number;
   size: string[];
-  color: string[];
 };
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 const MainPage = async ({ params }: Props) => {
