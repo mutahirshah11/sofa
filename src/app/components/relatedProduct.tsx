@@ -45,7 +45,7 @@ export default function ProductDetails() {
           {products.map((item, index) => (
             <div key={index}>
               <ShopitemsProps
-                id={`./MainPage/${item.id}`}
+                id={`./${item.id}`}
                 name={item.name}
                 price={item.price}
                 image={urlFor(item.image).url()}
