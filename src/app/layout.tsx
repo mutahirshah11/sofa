@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { CartProvider } from "./components/Provider";
+import ClerkProviderWrapper from "./components/clerkProvider"; // Import the wrapper
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,15 +17,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-
-         <CartProvider>
-
-          {children}
-          <Footer />
-          <Analytics />
-          
+        <ClerkProviderWrapper>
+          <CartProvider>
+            {children}
+            <Footer />
+            <Analytics />
           </CartProvider>
-        
+        </ClerkProviderWrapper>
       </body>
     </html>
   );

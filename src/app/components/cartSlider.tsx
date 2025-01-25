@@ -37,7 +37,7 @@ const CartSlider: React.FC = () => {
     <div>
       <Sheet>
         <SheetTrigger>
-          <div className="flex gap-1 lg:gap-1.5 items-center">
+          <div className="flex gap-1 lg:gap-1.5 mt-2.5 items-center">
             <Image
               src="/images/cart.png"
               alt="cart icon"
