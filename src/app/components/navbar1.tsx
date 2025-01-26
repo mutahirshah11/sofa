@@ -41,12 +41,12 @@ const Navbar1 = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-evenly xl:justify-between  items-center gap-12 md:gap-24 lg:gap-32 xl:gap-44 h-[80px] lg:h-[100px] bg-[#FFFFFF] shadow-md">
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-evenly xl:justify-between  items-center gap-12 md:gap-24 lg:gap-32 xl:gap-44 h-[80px] lg:h-[100px] bg-[#FBEBB5] shadow-md">
         <div className="lg:pb-0 mt-2">
           {/* SignIn and User Button */}
           <SignedOut>
             <SignInButton>
-              <button className="flex gap-1 xl:ml-20 mt-2 md:mt-0  ">
+              <button className="flex gap-1 xl:ml-28 mt-2 md:mt-0  ">
                 <FontAwesomeIcon icon={faUser} className="md:size-5  " />
                 <p className="text-[12px] md:text-[15px] xl:text-[17px]">
                   Login/Signup
@@ -54,12 +54,15 @@ const Navbar1 = () => {
               </button>
             </SignInButton>
           </SignedOut>
-
           <SignedIn>
-            <div className="mt-1 pl-10 ">
-
-              {/* Increase width and height */}
-              <UserButton/>
+            <div className="mt-1 pl-10">
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: "w-8 h-8 md:w-10 md:h-10  lg:w-11 lg:h-11", // Size increase (adjust as needed)
+                  },
+                }}
+              />
             </div>
           </SignedIn>
         </div>
