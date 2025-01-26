@@ -54,12 +54,15 @@ const Navbar1 = () => {
               </button>
             </SignInButton>
           </SignedOut>
-
           <SignedIn>
-            <div className="mt-1 pl-10 ">
-
-              {/* Increase width and height */}
-              <UserButton/>
+            <div className="mt-1 pl-10">
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: "w-8 h-8 md:w-10 md:h-10  lg:w-11 lg:h-11", // Size increase (adjust as needed)
+                  },
+                }}
+              />
             </div>
           </SignedIn>
         </div>
