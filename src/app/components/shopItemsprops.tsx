@@ -13,9 +13,9 @@ const ShopitemsProps = ({ id, name, price, image }: Product) => {
       {/* Cards */}
       <div>
         <div>
-          <div>
+          <div className="">
             <Link href={id}>
-              <Image src={image} alt={name} width={300} height={300} />
+              <Image src={image} alt={name} width={300} height={300} className="hover:opacity-55 " />
               <p className="font-sans text-[16px] font-semibold w-[70%] mb-2">
                 {name}
               </p>

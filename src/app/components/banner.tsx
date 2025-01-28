@@ -13,7 +13,7 @@ const Banner: React.FC<BannerProps> = ({ title, subtitle, breadcrumb }) => {
   return (
     <div>
       <div>
-        <div>
+        <div className="animate-fadeIn">
           {/* Background Image */}
           <div className="relative">
             <Image src={banner} alt="banner" className="w-full" />

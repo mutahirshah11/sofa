@@ -61,7 +61,7 @@ const MainPage = async ({ params }: Props) => {
       <Navbar1 />
       {/* Breadcrumb */}
       <div className="flex justify-start items-start ml-10 lg:ml-20 mt-20 text-gray-600 gap-3">
-        <Link href="#" className="text-sm md:text-base hover:underline">
+        <Link href="../" className="text-sm md:text-base hover:underline">
           Home
         </Link>
         <span className="mx-2 text-[black]">&gt;</span>

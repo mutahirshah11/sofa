@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import ASgaardsofa from "../../../public/images/Asgaard sofa 1.png"
+import Link from 'next/link'
 
 const AsgaardSofa = () => {
   return (
@@ -16,7 +17,9 @@ const AsgaardSofa = () => {
             <div className='flex flex-col justify-center items-center text-center gap-1'>
                 <p className='text-[15px] font-semibold lg:text-[20px] '>New Arrivals</p>
                 <p className='text-[30px] font-extrabold lg:text-[40px] mb-2 lg:mb-5 '>Asgaard sofa</p>
+                <Link href='../Shop'>
                 <button className='border-[1px] border-black px-12 py-2.5  text-center font-normal hover:bg-yellow-400 hover:font-bold '>Order now</button>
+                 </Link>
             </div>
 
         </div>
