@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Wrapper */}
       <div className="flex flex-col md:flex-row items-center  ">
         {/* Text */}
-        <div className="w-[300px] xl:w-[400px] ml-10 md:mb-32 mt-10 md:mt-0 xl:ml-36 xl:mb-28 ">
+        <div className="w-[300px] xl:w-[400px] ml-10 md:mb-32 mt-10 md:mt-0 xl:ml-36 xl:mb-28  animate-bounceIn ">
           <h1 className="font-[500] text-[#000000] text-[37px] md:text-[42px] xl:text-[52px] mb-3 xl:mb-5 xl:mt-28   ">
             Rocket single seater
           </h1>

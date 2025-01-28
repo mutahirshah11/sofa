@@ -41,7 +41,7 @@ const Navbar1 = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full z-50 flex justify-evenly xl:justify-between  items-center gap-12 md:gap-24 lg:gap-32 xl:gap-44 h-[80px] lg:h-[100px] bg-[#FBEBB5] shadow-md">
+      <div className="fixed top-0 left-0 w-full z-50 flex justify-evenly xl:justify-between  items-center gap-12 md:gap-24 lg:gap-32 xl:gap-44 h-[80px] lg:h-[100px] bg-[#FBEBB5] shadow-md  ">
         <div className="lg:pb-0 mt-2">
           {/* SignIn and User Button */}
           <SignedOut>
@@ -55,7 +55,7 @@ const Navbar1 = () => {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <div className="mt-1 pl-10">
+            <div className="mt-1 ml-10  xl:ml-20 ">
               <UserButton
                 appearance={{
                   elements: {
